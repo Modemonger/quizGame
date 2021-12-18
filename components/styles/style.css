@@ -253,38 +253,6 @@
   color: #d400d4;
 }
 
-* body #root #quizContainer .button {
-  position: relative;
-  width: 26rem;
-  height: 10rem;
-  margin: 3rem;
-  background-color: #0e1538;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bolder;
-  border: none;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-}
-
-* body #root #quizContainer .button::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  -webkit-transform: skew(2deg, 4deg);
-          transform: skew(2deg, 4deg);
-  background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
-  z-index: -10;
-}
-
-* body #root #quizContainer .button:hover {
-  -webkit-box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
-          box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
-}
-
 * body #root #progressBar {
   width: 80%;
   height: 3rem;
@@ -319,5 +287,46 @@
           user-select: none;
   font-size: 3.5rem;
   font-weight: bold;
+}
+
+* body #root .button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 26rem;
+  height: 10rem;
+  margin: 3rem;
+  background-color: #0e1538;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bolder;
+  border: none;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+* body #root .button::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  -webkit-transform: skew(2deg, 4deg);
+          transform: skew(2deg, 4deg);
+  background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
+  z-index: -10;
+}
+
+* body #root .button:hover {
+  -webkit-box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
 }
 /*# sourceMappingURL=style.css.map */

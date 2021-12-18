@@ -172,35 +172,6 @@
                         color: #d400d4;
                     }
                 }
-                .button{
-                    position: relative;
-                    width: 26rem;
-                    height: 10rem;
-                    margin: 3rem;
-                    background-color: $backgroundColor;
-                    color: $textColor;
-                    font-size: 2rem;
-                    font-weight: bolder;
-                    border: none;
-                    transition: .2s ease-in-out;
-                    
-                }
-                
-                .button::before{
-                    content: "";
-                    position: absolute;
-                    top: -4px;
-                    left: -4px;
-                    right: -4px;
-                    bottom: -4px;
-                    transform: skew(2deg, 4deg);
-                    background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
-                    z-index: -10;
-                }
-                .button:hover{
-                    box-shadow: 0 0 50px rgba(255, 255, 255, .3);
-                }
-                
             }
             #progressBar{
                 width: 80%;
@@ -223,6 +194,36 @@
                         font-weight: bold;
                     }
                 }
+            }
+            .button{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 26rem;
+                height: 10rem;
+                margin: 3rem;
+                background-color: $backgroundColor;
+                color: $textColor;
+                font-size: 2rem;
+                font-weight: bolder;
+                border: none;
+                transition: .2s ease-in-out;
+                
+            }
+            .button::before{
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: -4px;
+                right: -4px;
+                bottom: -4px;
+                transform: skew(2deg, 4deg);
+                background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
+                z-index: -10;
+            }
+            .button:hover{
+                box-shadow: 0 0 50px rgba(255, 255, 255, .3);
             }
         }
     }

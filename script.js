@@ -30,6 +30,14 @@ questionNum.id = 'questionNum';
 progress.append(questionNum);
 progressBar.append(progress);
 
-root.append(timerBox,progressBar,quizContainer);// put the three together
 
-printQuestion();
+
+const start = document.createElement('div');
+start.className = 'button';
+start.innerText = 'START';
+root.append(start);
+start.addEventListener('click', function(){
+    root.append(timerBox,progressBar,quizContainer);// put the three together
+    printQuestion();
+    start.remove();
+}, false);

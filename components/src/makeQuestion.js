@@ -7,7 +7,7 @@ import renderResults from "./results.js";
 import shuffleFisherYates from "../util/shuffle.js";
 
 let index = 0;
-let seconds = 15;
+let seconds = 20;
 let ranQuestions;
 
 export default function printQuestion(){

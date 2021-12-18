@@ -4,6 +4,8 @@ import printQuestion from "./makeQuestion.js";
 
 export default function renderResults(){
     const quizContainer = document.getElementById('quizContainer');
+    const questionNum = document.getElementById('questionNum');
+    questionNum.innerText = 'FINISHED!';
     removeChildren(quizContainer);
     removeChildren(timer);
     const score = showScore();

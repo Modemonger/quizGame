@@ -42,8 +42,8 @@
   width: 50px;
   height: 50px;
   position: absolute;
-  top: -1.5rem;
-  left: -1rem;
+  top: 0;
+  left: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -137,6 +137,12 @@
   width: 80%;
 }
 
+@media screen and (max-width: 425px) {
+  * body #root #quizContainer {
+    width: 90%;
+  }
+}
+
 * body #root #quizContainer .question {
   text-align: start;
   height: -webkit-fit-content;
@@ -199,6 +205,12 @@
   z-index: 0;
 }
 
+@media screen and (max-width: 425px) {
+  * body #root #quizContainer #answerContainer p {
+    height: 8rem;
+  }
+}
+
 * body #root #quizContainer #answerContainer p::before {
   content: "";
   position: absolute;
@@ -242,6 +254,12 @@
   color: #0cf;
 }
 
+@media screen and (max-width: 425px) {
+  * body #root #quizContainer #correct {
+    font-size: 2.4rem;
+  }
+}
+
 * body #root #quizContainer #incorrect {
   font-size: 2.2rem;
   font-weight: bold;
@@ -253,12 +271,24 @@
   color: #d400d4;
 }
 
+@media screen and (max-width: 425px) {
+  * body #root #quizContainer #incorrect {
+    font-size: 2rem;
+  }
+}
+
 * body #root #progressBar {
   width: 80%;
   height: 3rem;
   -webkit-transform: skew(-2deg, -4deg);
           transform: skew(-2deg, -4deg);
   background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
+}
+
+@media screen and (max-width: 425px) {
+  * body #root #progressBar {
+    margin-top: 3rem;
+  }
 }
 
 * body #root #progressBar #progress {
@@ -302,7 +332,7 @@
           justify-content: center;
   width: 26rem;
   height: 10rem;
-  margin: 3rem;
+  margin: 10rem 3rem;
   background-color: #0e1538;
   color: #fff;
   font-size: 2rem;
@@ -310,6 +340,12 @@
   border: none;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+}
+
+@media screen and (max-width: 425px) {
+  * body #root .button {
+    width: 22rem;
+  }
 }
 
 * body #root .button::before {

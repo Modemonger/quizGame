@@ -25,8 +25,8 @@
                 width: 50px;
                 height: 50px;
                 position: absolute;
-                top: -1.5rem;
-                left: -1rem;
+                top: 0;
+                left: 0;
                 user-select: none;
                 color: $textColor;
                 font-size: 2.2rem;
@@ -89,6 +89,9 @@
                 justify-content: center;
                 flex-direction: column;
                 width: 80%;
+                @media screen and (max-width: 425px) {
+                    width: 90%;
+                }
                 .question{
                     text-align: start;
                     height: fit-content;
@@ -124,7 +127,9 @@
                             text-align: center;
                             transition: 100ms;
                             z-index: 0;
-                            
+                            @media screen and (max-width: 425px) {
+                                height: 8rem;
+                            }
                         }
                         p::before{
                             content: "";
@@ -162,7 +167,11 @@
                         font-size: 4rem;
                         color: #0cf;
                     }
+                    @media screen and (max-width: 425px) {
+                        font-size: 2.4rem;
+                    }
                 }
+                
                 #incorrect{
                     font-size: 2.2rem;
                     font-weight: bold;
@@ -171,6 +180,9 @@
                         font-size: 2.6rem;
                         color: #d400d4;
                     }
+                    @media screen and (max-width: 425px) {
+                        font-size: 2rem;
+                    }
                 }
             }
             #progressBar{
@@ -178,6 +190,9 @@
                 height: 3rem;
                 transform: skew(-2deg, -4deg);
                 background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
+                @media screen and (max-width: 425px) {
+                    margin-top: 3rem;
+                }
                 #progress{
                     display: flex;
                     align-items: center;
@@ -202,13 +217,16 @@
                 justify-content: center;
                 width: 26rem;
                 height: 10rem;
-                margin: 3rem;
+                margin: 10rem 3rem;
                 background-color: $backgroundColor;
                 color: $textColor;
                 font-size: 2rem;
                 font-weight: bolder;
                 border: none;
                 transition: .2s ease-in-out;
+                @media screen and (max-width: 425px) {
+                    width: 22rem;
+                }
                 
             }
             .button::before{

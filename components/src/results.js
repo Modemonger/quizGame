@@ -25,7 +25,6 @@ export default function renderResults(){
         progress.style.width = '0%';
         removeChildren(quizContainer);
         printQuestion();
-        console.log("is it working");
     });
 
     quizContainer.append(right, wrong, reset);

@@ -5,10 +5,12 @@ import getCount from "./timer.js";
 import {addRight, addWrong, clearScore} from "./score.js";
 import renderResults from "./results.js";
 import shuffleFisherYates from "../util/shuffle.js";
+import resault from './resultList.js';
 
 let index = 0;
 let seconds = 20;
 let ranQuestions;
+let answerList = [];
 
 export default function printQuestion(){
     const timer = document.getElementById('timer');
@@ -36,7 +38,7 @@ export default function printQuestion(){
         timer.style.cssText = 'visibility: hidden; height: 2rem; margin: 1rem;';
         timerBox.style.cssText = 'visibility: hidden; height: 2rem; margin: 1rem;';
         clearInterval(time);
-        renderResults();
+        renderResults(ranQuestions, answerList);
         clearScore();
         return;
     }
@@ -57,17 +59,18 @@ export default function printQuestion(){
         answersContainer.append(quest);
         quest.addEventListener('click', function(){
             if(elem.isCorrect == true){
-                addRight();
+                addRight(elem.text);
                 clearInterval(time);
                 getCount(seconds);
+                answerList[index] = (resault(elem.text, true));
                 printQuestion();
             }
             else{
-                addWrong();
+                addWrong(elem.text);
                 clearInterval(time);
                 getCount(seconds);
+                answerList[index] = (resault(elem.text, false));
                 printQuestion();
-                
             }
         });
     });

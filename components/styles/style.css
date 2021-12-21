@@ -142,7 +142,7 @@
   width: 80%;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   * body #root #quizContainer {
     width: 90%;
   }
@@ -210,7 +210,7 @@
   z-index: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   * body #root #quizContainer #answerContainer p {
     height: 8rem;
   }
@@ -260,7 +260,7 @@
   color: #0cf;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   * body #root #quizContainer #correct {
     font-size: 2.4rem;
   }
@@ -278,7 +278,7 @@
   color: #d400d4;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   * body #root #quizContainer #incorrect {
     font-size: 2rem;
   }
@@ -296,7 +296,7 @@
   color: #fff;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   * body #root #quizContainer #missed {
     font-size: 1.6rem;
   }
@@ -310,7 +310,7 @@
   background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   * body #root #progressBar {
     margin-top: 3rem;
   }
@@ -367,7 +367,7 @@
   transition: .2s ease-in-out;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   * body #root .button {
     width: 22rem;
   }
@@ -387,7 +387,7 @@
       justify-content: space-around;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   * body #root #scoresContainer #checYourself {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -419,7 +419,7 @@
   color: #fff;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 445px) {
   * body #root #scoresContainer #checYourself .answered {
     width: 40%;
   }

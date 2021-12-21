@@ -93,7 +93,7 @@
                 justify-content: center;
                 flex-direction: column;
                 width: 80%;
-                @media screen and (max-width: 425px) {
+                @media screen and (max-width: 445px) {
                     width: 90%;
                 }
                 .question{
@@ -131,7 +131,7 @@
                             text-align: center;
                             transition: 100ms;
                             z-index: 0;
-                            @media screen and (max-width: 425px) {
+                            @media screen and (max-width: 445px) {
                                 height: 8rem;
                             }
                         }
@@ -172,7 +172,7 @@
                         font-size: 4rem;
                         color: #0cf;
                     }
-                    @media screen and (max-width: 425px) {
+                    @media screen and (max-width: 445px) {
                         font-size: 2.4rem;
                     }
                 }
@@ -186,7 +186,7 @@
                         font-size: 2.6rem;
                         color: #d400d4;
                     }
-                    @media screen and (max-width: 425px) {
+                    @media screen and (max-width: 445px) {
                         font-size: 2rem;
                     }
                 }
@@ -199,7 +199,7 @@
                         font-size: 2.2rem;
                         color: $textColor;
                     }
-                    @media screen and (max-width: 425px) {
+                    @media screen and (max-width: 445px) {
                         font-size: 1.6rem;
                     }
                 }
@@ -209,7 +209,7 @@
                 height: 3rem;
                 transform: skew(-2deg, -4deg);
                 background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
-                @media screen and (max-width: 425px) {
+                @media screen and (max-width: 445px) {
                     margin-top: 3rem;
                 }
                 #progress{
@@ -243,7 +243,7 @@
                 font-weight: bolder;
                 border: none;
                 transition: .2s ease-in-out;
-                @media screen and (max-width: 425px) {
+                @media screen and (max-width: 445px) {
                     width: 22rem;
                 }
                 
@@ -254,7 +254,7 @@
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: space-around;
-                        @media screen and (max-width: 425px) {
+                        @media screen and (max-width: 445px) {
                             flex-wrap: nowrap;
                             flex-direction: column;
                             justify-content: space-around;
@@ -267,7 +267,7 @@
                         font-size: 1.4rem;
                         margin: 2rem;
                         color: $textColor;
-                        @media screen and (min-width: 425px) {
+                        @media screen and (min-width: 445px) {
                             width: 40%;
                         }
                         .givenQuestion{

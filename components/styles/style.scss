@@ -20,6 +20,7 @@
             justify-content: center;
             flex-direction: column;
             color: $textColor;
+            overflow-x: hidden;
             #logo{
                 display: flex;
                 width: 50px;

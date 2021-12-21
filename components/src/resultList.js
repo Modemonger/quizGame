@@ -1,12 +1,15 @@
 class quest{
-    constructor(index, answer){
-        this.index = index;
-        this.answer = answer;
+    constructor(text, state){
+        this.text = text;
+        this.state = state;
     }
     getState(){
-        const arr = [this.index, this.answer];
+        const arr = [this.text, this.state];
         return arr;
     }
 };
 
-export default function(){quest};
+export default function resault(text,state){
+    const tmp = new quest(text,state);
+    return tmp;
+};

@@ -2,7 +2,7 @@ import removeChildren from "../util/childElements.js";
 import showScore from "./score.js";
 import printQuestion from "./makeQuestion.js";
 
-export default function renderResults(questions, answers){
+export default function renderResults(questions, givenAnswer){
     const quizContainer = document.getElementById('quizContainer');
     const questionNum = document.getElementById('questionNum');
     questionNum.innerText = 'FINISHED!';
@@ -22,24 +22,53 @@ export default function renderResults(questions, answers){
 
     const missed = document.createElement('p');
     missed.id = 'missed';
-    missed.innerHTML = `And missed <span>${score[2]}</span> questions`;
+    if(score[2] <= 1 && score[2] != 0) missed.innerHTML = `And missed <span>${score[2]}</span> question`;
+    else missed.innerHTML = `And missed <span>${score[2]}</span> questions`;
 
     const showButton = document.createElement('button');
     showButton.id = 'showScores';
+    showButton.className = 'button';
     showButton.innerText = 'See what you got wrong';
 
     const answersContainer = document.createElement('div');
     answersContainer.id = 'scoresContainer';
+    answersContainer.style.display = 'none';
 
-    questions.forEach(elem => {
+    const check = document.createElement('div');
+    check.id = 'checYourself';
+
+    for(let i = 0; i < questions.length; i++){
         const question = document.createElement('p');
+        const answered = document.createElement('div');
+        answered.className = 'answered';
         question.className = 'givenQuestion';
-        question.innerText = elem.question;
-        elem.answers.forEach(element => {
-            const anwser = document.createElement('p');
-            anwser.id = 'givenAnswer';
-            anwser.innerText = element.text;
-        });
+        question.innerText = questions[i].question;
+        answered.append(question);
+        for(let ii = 0; ii < questions[i].answers.length; ii++){
+            const answer = document.createElement('p');
+            answer.className = 'givenAnswer';
+            answer.innerText = questions[i].answers[ii].text;
+            
+            if(givenAnswer[i+1]!=undefined && questions[i].answers[ii].text == givenAnswer[i+1][0] && questions[i].answers[ii].isCorrect == true){
+                answer.classList = 'right givenAnswer';
+            }
+            else if(givenAnswer[i+1]!=undefined && questions[i].answers[ii].text == givenAnswer[i+1][0] && questions[i].answers[ii].isCorrect == false) 
+                answer.classList = 'wrong givenAnswer';
+
+            if(questions[i].answers[ii].isCorrect == true) answer.classList.add('correct');
+            
+            answered.append(answer);
+        }
+        
+        check.append(answered);
+        
+    }
+    answersContainer.append(check);
+    showButton.addEventListener('click', function(){
+        if(answersContainer.style.display == 'block'){
+            answersContainer.style.display = 'none';
+        }
+        else answersContainer.style.display = 'block';
     });
 
     // the big button boi
@@ -58,5 +87,5 @@ export default function renderResults(questions, answers){
 
     });
 
-    quizContainer.append(right, wrong, missed, reset);
+    quizContainer.append(right, wrong, missed, showButton, answersContainer, reset);
 }

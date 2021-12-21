@@ -1,5 +1,3 @@
-import resault from './resultList.js';
-
 let right = 0;
 
 let wrong = 0;
@@ -11,11 +9,11 @@ export default function showScore(){
     return score;
 }
 
-export function addRight(index){
+export function addRight(){
     right++;
 }
 
-export function addWrong(index){
+export function addWrong(){
     wrong++;
 }
 
@@ -25,6 +23,6 @@ export function clearScore(){
     missed=0;
 }
 
-export function addMissed(index){
+export function addMissed(){
     missed++;
 }

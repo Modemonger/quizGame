@@ -35,7 +35,9 @@ progressBar.append(progress);
 const start = document.createElement('div');
 start.className = 'button';
 start.innerText = 'START';
+start.id = 'start';
 root.append(start);
+
 start.addEventListener('click', function(){
     root.append(timerBox,progressBar,quizContainer);// put the three together
     printQuestion();

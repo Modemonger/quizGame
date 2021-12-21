@@ -69,6 +69,10 @@
   z-index: -10;
 }
 
+* body #root #start {
+  margin-top: 40vh;
+}
+
 * body #root #timerBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,6 +251,7 @@
   font-size: 3rem;
   font-weight: bold;
   margin: 2rem;
+  text-align: center;
 }
 
 * body #root #quizContainer #correct span {
@@ -264,6 +269,7 @@
   font-size: 2.2rem;
   font-weight: bold;
   margin: 2rem;
+  text-align: center;
 }
 
 * body #root #quizContainer #incorrect span {
@@ -274,6 +280,24 @@
 @media screen and (max-width: 425px) {
   * body #root #quizContainer #incorrect {
     font-size: 2rem;
+  }
+}
+
+* body #root #quizContainer #missed {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 2rem;
+  text-align: center;
+}
+
+* body #root #quizContainer #missed span {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  * body #root #quizContainer #missed {
+    font-size: 1.6rem;
   }
 }
 
@@ -332,7 +356,7 @@
           justify-content: center;
   width: 26rem;
   height: 10rem;
-  margin: 10rem 3rem;
+  margin: 3rem 3rem;
   background-color: #0e1538;
   color: #fff;
   font-size: 2rem;
@@ -346,6 +370,127 @@
   * body #root .button {
     width: 22rem;
   }
+}
+
+* body #root #scoresContainer {
+  width: 100%;
+}
+
+* body #root #scoresContainer #checYourself {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 425px) {
+  * body #root #scoresContainer #checYourself {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+* body #root #scoresContainer #checYourself .answered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.4rem;
+  margin: 2rem;
+  color: #fff;
+}
+
+@media screen and (min-width: 425px) {
+  * body #root #scoresContainer #checYourself .answered {
+    width: 40%;
+  }
+}
+
+* body #root #scoresContainer #checYourself .answered .givenQuestion {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  font-size: 2.2rem;
+  padding: .5rem;
+  margin-bottom: 5rem;
+  background-color: #0e1538;
+}
+
+* body #root #scoresContainer #checYourself .answered .givenQuestion::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  -webkit-transform: skew(2deg, 4deg);
+          transform: skew(2deg, 4deg);
+  background: linear-gradient(315deg, #0cf, #0e1538, #d400d4);
+  z-index: -10;
+}
+
+* body #root #scoresContainer #checYourself .answered .givenAnswer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+* body #root #scoresContainer #checYourself .answered .givenAnswer::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  -webkit-transform: skew(2deg, 4deg);
+          transform: skew(2deg, 4deg);
+  z-index: -10;
+}
+
+* body #root #scoresContainer #checYourself .answered .right {
+  position: relative;
+  background-color: #00dd005e;
+}
+
+* body #root #scoresContainer #checYourself .answered .wrong {
+  position: relative;
+  background-color: #d400515e;
+}
+
+* body #root #scoresContainer #checYourself .answered .correct {
+  -webkit-box-shadow: 0 0 20px rgba(50, 255, 50, 0.5);
+          box-shadow: 0 0 20px rgba(50, 255, 50, 0.5);
 }
 
 * body #root .button::before {

@@ -59,17 +59,19 @@ export default function printQuestion(){
         answersContainer.append(quest);
         quest.addEventListener('click', function(){
             if(elem.isCorrect == true){
-                addRight(elem.text);
+                addRight();
                 clearInterval(time);
                 getCount(seconds);
-                answerList[index] = (resault(elem.text, true));
+                const tmp = resault(elem.text, true);
+                answerList[index] = tmp.getState();
                 printQuestion();
             }
             else{
-                addWrong(elem.text);
+                addWrong();
                 clearInterval(time);
                 getCount(seconds);
-                answerList[index] = (resault(elem.text, false));
+                const tmp = resault(elem.text, false);
+                answerList[index] = tmp.getState();
                 printQuestion();
             }
         });

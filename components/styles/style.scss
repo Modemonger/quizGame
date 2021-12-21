@@ -252,7 +252,7 @@
                     #checYourself{
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content: space-between;
+                        justify-content: space-around;
                         @media screen and (max-width: 425px) {
                             flex-wrap: nowrap;
                             flex-direction: column;

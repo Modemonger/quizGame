@@ -256,7 +256,7 @@
                         @media screen and (max-width: 425px) {
                             flex-wrap: nowrap;
                             flex-direction: column;
-
+                            justify-content: space-around;
                         }
                         .answered{
                         display: flex;
